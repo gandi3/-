@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2장</title>
+    <style>
+      body{
+        background-color:darkgray;
+      }
+      h1 {
+        font-size:80px;
+        text-align: center;
+      }
+      #hello {
+        text-align: center;
+        margin:15%;
+      }
+      #story{
+        font-size:20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 50px;
+        padding-right:50px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2장</h1>
+    <p id="hello">
+      <img src="2장3.png" width="200px">
+    </p>
+    <p id="story" style="border:5px solid black">
+      <br>
+      여기,, 언젠가 와봤던거 같은데,, 원래 이곳에 이런게 있었나?<br>
+      눈 앞에 보이는건 커다란 컨테이너 한 채,, 여길 들어가야 되는건가,,<br>
+      <br>
+    </p>
+    <div id="grid" style="margin-left: 10px;margin-top: 80px;margin-bottom: 80px;">
+      <input type="submit" value="들어간다" onclick="location.href='in.html'" style="margin: 5% 20% 5% 20%;font-size:20px">
+      <input type="submit" value="안들어간다" onclick="location.href='out.html'" style="margin: 5% 20% 5% 20%;font-size:20px"><br>
+    </div>
+  </body>
+</html>

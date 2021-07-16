@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1장</title>
+    <style>
+      body{
+        background-color:darkgray;
+      }
+      h1 {
+        font-size:80px;
+        text-align: center;
+      }
+      #hello {
+        text-align: center;
+        margin:15%;
+      }
+      #story{
+        font-size:20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 50px;
+        padding-right:50px;
+      }
+      #StoryPicture{
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom:20px;
+        display: block;
+        width: 30%;
+      }
+      #StoryQuiz{
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom:20px;
+        display: block;
+        width: 40%;
+      }
+    </style>
+    <script>
+      function test() {
+
+      	let answer = document.getElementById('answer').value;
+      	if(answer == ""){
+      		alert('답을 기입해야 합니다.');
+      	}
+      	else if(answer == "F"){
+      		alert('정답입니다');
+          location.href='2.html';
+      	}
+        else if(answer == "f"){
+          alert('정답입니다');
+          location.href='2.html';
+        }
+      	else{
+      		document.getElementById('answer').value = "";
+      		alert('정답이 아닙니다');
+      	}
+      }
+    </script>
+  </head>
+  <body>
+    <h1>1장</h1>
+    <p id="hello">
+      <img src="1장2.png" width="200px">
+    </p>
+    <p id="story" style="border:5px solid black">
+      <br>
+      어느날 아침<br>
+      자고 일어난 김미애<br>
+      비가 오는 날이여서 창문을 닫으려는데<br>
+      발코니에 편지가 하나 적혀있다.<br>
+      그리고 함께 온 사진하나<br>
+      <span style="border:2px double black;display: block;text-align:center;margin-top: 100px;margin-bottom: 100px;margin-left: 25%;margin-right: 25%;">
+      <img id="StoryPicture" src="1장 스토리1.jpg" >
+      <span style="color:blue;display: block;text-align:center">'이 아이 내가 데리고 있다.<br>
+      시간안에 오지 않는다면 이 아이는 상어밥이 될 것이다.<br>
+      아래 적혀 있는 곳으로 와라'<br></span><br></span>
+      김미애는 아래 적힌것을 보았는데, 주소처럼 보이지 않는다.<br>
+      어떻게 가야 하지..<br><br>
+      <span style="border:2px dashed red;color:black;display: block;text-align:center">
+      <img id="StoryQuiz" src="1장 퀴즈.png" >
+      초보 운전자가 출발점(화살표)을 출발하여 A~G의 차고로 들어가야 합니다.<br>
+      그러나 이 초보 운전자는 U턴이나 후진은 아직 할 줄 모르며, 모퉁이를 돌 경우에도 직각진 곳에서는 커브를 틀지 못합니다.<br>
+      그래서 아무리 돌아다녀도 들어갈 수 없는 차고 한 군데가 아이가 갇혀 있는 곳입니다.<br>
+      그곳은 어디일까요?<br>
+      (단, 블럭 하나를 끼고 도는건 U턴이 아니다.)<br></span><br>
+    </p>
+    <p style="margin-left: 10px;margin-top: 80px;margin-bottom: 80px;">
+    <label for="answer">정답 : </label><br>
+    <input type="text" id="answer" name="answer">
+    <input type="submit" value="제출" onclick="test()"><br>
+    </p>
+  </body>
+</html>

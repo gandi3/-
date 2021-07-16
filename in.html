@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2장 in</title>
+    <style>
+      body{
+        background-color:black;
+      }
+      h1 {
+        color:white;
+        font-size:80px;
+        text-align: center;
+      }
+      #hello {
+        text-align: center;
+        margin:15%;
+      }
+      #story{
+        color:white;
+        font-size:20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 50px;
+        padding-right:50px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    </style>
+    <script>
+      function test() {
+
+        let answer = document.getElementById('answer').value;
+        if(answer == ""){
+          alert('답을 기입해야 합니다.');
+        }
+        else if(answer == "72"){
+          alert('정답입니다');
+          location.href='3.html';
+        }
+        else{
+          document.getElementById('answer').value = "";
+          alert('정답이 아닙니다');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>2장 in</h1>
+    <p id="hello">
+      <img src="촛불.png" width="200px">
+    </p>
+    <p id="story" style="border:5px solid white">
+      <br>
+      [블랙룸]<br>
+      ...! 밖에서 문이 잠겼다... <br>
+      네 면이 까맣고 지금 보이는 건 단하나의 하얀 문..<br>
+      문에 무언가가 붙어있다.<br>
+      <br>
+      <span style="border:2px dashed powderblue;color:white;display: block;text-align:center">
+      <br>
+      <img id="StoryQuiz" src="2장 퀴즈.png"><br><br>
+      점 A 에서 출발하여 11개의 변을 지났을 때 점 A 로 돌아온다고 합니다.<br>
+      가능한 경로의 수가 하얀 문을 나갈 수 있는 비밀번호입니다.<br>
+      비밀번호는 무엇일까요?<br>
+      (단, 점과 점 사이를 잇는 선을 변으로 하고, 지나간 변은 중복하여 지나가는 것이 가능하다.)<br></span><br>
+    </p>
+    <p style="margin-left: 10px;margin-top: 80px;margin-bottom: 80px;">
+    <label for="answer" style="color:white">정답 : </label><br>
+    <input type="text" id="answer" name="answer">
+    <input type="submit" value="제출" onclick="test()"><br>
+    </p>
+  </body>
+</html>
